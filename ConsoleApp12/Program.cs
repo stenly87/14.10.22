@@ -139,4 +139,12 @@ int firstNegativeValue = array.
 int lastNotZero = array.Last(s => s != 0);
 int sumElements3and4 = array.Skip(2).Take(2).Sum();
 int indexValue100 = array.IndexOf(100);
+//***** не очень удачное применение функций 
+int maxValue = array.Max();
+int minValue = array.Min();
+int maxIndex = array.IndexOf(maxValue);
+int minIndex = array.IndexOf(minValue);
+array[maxIndex] = minValue;
+array[minIndex] = maxValue;
+//***** - много циклов, по сравнению с созданием своего цикла
 array.Clear(); // очистить коллекцию
