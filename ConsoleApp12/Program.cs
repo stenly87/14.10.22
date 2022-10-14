@@ -113,7 +113,7 @@ int index = array.IndexOf(10); //определить индекс
 Console.WriteLine(result);
 //кусок 5ого задания
 List<int> array2 = array.
-    Where(s => s % 2 == 0).ToList();
+    Count(s => s % 2 == 0);
 if (array2.Count == 0)
     Console.WriteLine("Четных элементов нет");
 // кусок 6 задачи
@@ -132,3 +132,11 @@ array = array.Select(s => {
         return s;
     }).ToList();
 Console.WriteLine("Кол-во замен: " + count);
+
+int countPozitive = array.Count(s => s > 0);
+int firstNegativeValue = array.
+    FirstOrDefault(s => s < 0);
+int lastNotZero = array.Last(s => s != 0);
+int sumElements3and4 = array.Skip(2).Take(2).Sum();
+int indexValue100 = array.IndexOf(100);
+array.Clear(); // очистить коллекцию
